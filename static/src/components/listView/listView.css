@@ -1,0 +1,128 @@
+html, body, #wrapwrap {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+  }
+  
+  .web_client {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .o_content {
+    flex: 1;
+    overflow: hidden; 
+  }
+  
+  .property-table-container {
+    max-height: 75vh; 
+    overflow-y: auto;
+    border-radius: 8px;
+    margin: 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+  }
+  .property-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  .property-table thead {
+    background-color: #86c2ff;
+    border-bottom: 2px solid #dee2e6;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .property-table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .property-table tbody tr {
+    border-bottom: 1px solid #dee2e6;
+    transition: background-color 0.2s ease;
+  }
+  
+  .property-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  .property-table tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  .property-table td {
+    padding: 12px 15px;
+    color: #212529;
+  }
+  
+  .property-table .property-name {
+    font-weight: 500;
+  }
+  
+  .property-table .property-postcode {
+    font-family: monospace;
+    color: #495057;
+  }
+  
+  .property-table .property-date {
+    color: #6c757d;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .property-table-container {
+      max-height: none;
+      overflow-y: visible;
+    }
+  
+    .property-table {
+      border: 0;
+      box-shadow: none;
+    }
+  
+    .property-table thead {
+      display: none;
+      position: static;
+    }
+  
+    .property-table tbody tr {
+      display: block;
+      margin-bottom: 1rem;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .property-table td {
+      display: block;
+      text-align: right;
+      padding: 10px 15px;
+      position: relative;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .property-table td:last-child {
+      border-bottom: 0;
+    }
+  
+    .property-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      color: #6c757d;
+    }
+  }

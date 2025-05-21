@@ -1,0 +1,61 @@
+<odoo>
+    <record id="view_property_history_tree" model="ir.ui.view">
+        <field name="name">property.history.tree</field>
+        <field name="model">property.history</field>
+        <field name="arch" type="xml">
+            <list string="Property History" create="false" delete="false" edit="false"> 
+                <field name="user_id"/>
+                <field name="property_id"/>
+                <field name="old_state"/>
+                <field name="new_state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_property_history_form" model="ir.ui.view">
+        <field name="name">property.history.form</field>
+        <field name="model">property.history</field>
+        <field name="arch" type="xml">
+            <form string="Property History" create="false" delete="false" edit="false">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="property_id"/>
+                        </group>
+                        <group>
+                            <field name="old_state"/>
+                            <field name="new_state"/>
+                            <field name="reason" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Bedrooms">
+                            <field name="line_ids" readonly = "1">
+                                <list>
+                                    <field name="description"/>
+                                    <field name="area"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="property_history_action" model="ir.actions.act_window">
+        <field name="name">Property History</field>
+        <field name="res_model">property.history</field>
+    </record>
+
+    <menuitem id="menu_property_history"
+              name="Property History" 
+              action="property_history_action" 
+              parent="properties_menu"
+              groups="real_estate.property_manager_group"
+    />
+
+
+</odoo>

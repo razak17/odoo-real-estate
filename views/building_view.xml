@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="building_view_tree" model="ir.ui.view">
+        <field name="name">building.view.tree</field>
+        <field name="model">building</field>
+        <field name="arch" type="xml">
+            <list >
+                <field name="no" />
+                <field name="code" />
+                <field name="description" />
+                <field name="name" />
+                <field name="active" />
+            </list>
+        </field>
+    </record>
+
+    <record id="building_view_form" model="ir.ui.view">
+        <field name="name">building.view.form</field>
+        <field name="model">building</field>
+        <field name="arch" type="xml">
+            <form >
+                <sheet>
+                    <group>
+                        <field name="no"/>
+                        <field name="name" />
+                    </group>
+                    <group>
+                        <field name="code"/>
+                        <field name="active" />
+                    </group>
+                    <group>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+                <chatter class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </chatter>
+            </form>
+        </field>
+    </record>
+
+    <record id="building_view_search" model="ir.ui.view">
+        <field name="name">building.view.search</field>
+        <field name="model">building</field>
+        <field name="arch" type="xml">
+            <search string="">
+                <field name="no" />
+                <field name="code" />
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <record id="building_action" model="ir.actions.act_window">
+        <field name="name">Building</field>
+        <field name="res_model">building</field>
+    </record>
+
+    <menuitem
+        id="building_menu"
+        name="Buildings"
+        action="building_action"
+        parent="properties_menu" 
+    />
+</odoo>

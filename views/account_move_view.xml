@@ -1,0 +1,13 @@
+<odoo>
+    <record id="view_move_form_inherit_real_estate" model="ir.ui.view">
+        <field name="name">account.move.form.inherit.real.estate</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <!-- Example: Add a new field below the journal_id field -->
+            <xpath expr="//header" position="inside">
+                <button string="Do Something" name="action_do_something" type="object" class="btn-primary"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

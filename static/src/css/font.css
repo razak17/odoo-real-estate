@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'OutfitFont1';
+    src: url('../fonts/Outfit-VariableFont_wght.ttf');
+    /* src: url('../fonts/CustomFont1.woff2') format('woff2'),
+         url('../fonts/CustomFont1.woff') format('woff'),
+         url('../fonts/CustomFont1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; */
+}
+
+@font-face {
+    font-family: 'OutfitFont2';
+    src: url('../fonts/Inter-Italic-VariableFont_opsz,wght.ttf'),
+
+}
+
