@@ -43,7 +43,7 @@ git clone https://github.com/razak17/real-estate.git
 3. Activate Developer Mode in Odoo UI.
 4. Install the Real Estate module from the Apps menu.
 
-## 🛠️ Requirements
+## Requirements
 
 - Odoo 18
 - Python 3.10+

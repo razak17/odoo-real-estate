@@ -4,6 +4,7 @@
     'author': "Abdul Razak Mohammed",
     'email': "razakmoapps@gmail.com",
     "description":"Real Estate Management System",
+    'category': 'Administration',
     'depends': [
         'base','sale','account','mail','contacts'
         ],
