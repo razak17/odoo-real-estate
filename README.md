@@ -48,7 +48,3 @@ git clone https://github.com/razak17/real-estate.git
 - Odoo 18
 - Python 3.10+
 - PostgreSQL
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
