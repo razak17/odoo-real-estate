@@ -1,14 +1,12 @@
 {
-    "name":"Real Estate",
-    'version': '1.0',
-    'author': "Abdul Razak Mohammed",
-    'email': "razakmoapps@gmail.com",
-    "description":"Real Estate Management System",
-    'category': 'Administration',
-    'depends': [
-        'base','sale','account','mail','contacts'
-        ],
-    "data" : [
+    "name": "Real Estate",
+    "version": "1.0",
+    "author": "Abdul Razak Mohammed",
+    "email": "razakmoapps@gmail.com",
+    "description": "Real Estate Management System",
+    "category": "Administration",
+    "depends": ["base", "sale", "account", "mail", "contacts"],
+    "data": [
         "security/security.xml",
         "security/ir.model.access.csv",
         "data/sequence.xml",
@@ -25,17 +23,17 @@
         "wizard/change_state_wizard_view.xml",
         "reports/property_report.xml",
     ],
-    "assets" : {
-        "web.assets_backend" : [
-            'real_estate/static/src/css/property.css',
-            'real_estate/static/src/components/listView/listView.css',
-            'real_estate/static/src/components/listView/listView.js',
-            'real_estate/static/src/components/listView/listView.xml',
+    "assets": {
+        "web.assets_backend": [
+            "real_estate/static/src/css/property.css",
+            "real_estate/static/src/components/listView/listView.css",
+            "real_estate/static/src/components/listView/listView.js",
+            "real_estate/static/src/components/listView/listView.xml",
         ],
-        "web.report_assets_common" : [
-            'real_estate/static/src/css/font.css',
+        "web.report_assets_common": [
+            "real_estate/static/src/css/font.css",
         ],
     },
-    "application" : True,
-    'odoo_version': '18.0', 
+    "application": True,
+    "odoo_version": "18.0",
 }
